@@ -34,7 +34,9 @@ The architecture of this project is presented as follows:
 - To manage the relation many to many between incidents and incident categories, the `bridge table` is used.
 - To manage changes in data, `SCD Type 1` is applied to all table, `SCD Type 2` applied to `dim_category` and `dim_intersection` tables.
 
-<img src="https://github.com/minhky2185/incident_data_warehouse/blob/main/images/data_model.png" align="centre">
+<p align="center">
+  <img src="https://github.com/minhky2185/incident_data_warehouse/blob/main/images/data_model.png">
+</p>
 
 ## **ETL Pipeline**
 - To manage the repetitive jobs of ingest (from source to staging area) and load to data warehouse, I build 2 Airflow custom operators are `Socrata_to_S3` and `S3_to_Redshift`.
