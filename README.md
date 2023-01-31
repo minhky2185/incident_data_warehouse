@@ -21,6 +21,8 @@ The project aims to build a data warehouse for incidents that happened in San Fr
 ## **Architecture**
 The architecture of this project is presented as follows:
 
+![Architecture_1](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/architecture_1.png)
+
 - Data is sourced from [Socrata API](https://data.sfgov.org/Public-Safety/Police-Department-Incident-Reports-2018-to-Present/wg3w-h783) and ingested into `raw zone` of Staging Area hosted on S3.
 - Raw data is cleansed and standardized before moving to `cleansed zone`.
 - Cleansed data is transformed into data model used in data warehouse and loaded into `stage zone`. Now the data is ready for moving to data warehouse.
