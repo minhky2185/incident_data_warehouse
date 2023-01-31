@@ -7,15 +7,15 @@ The project aims to build a data warehouse for incidents that happened in San Fr
 
 ## **Tech Stack**
 
-**Staging Area:** Amazon S3
+- **Staging Area:** Amazon S3
 
-**Data warehouse:** Amazon Redshift
+- **Data warehouse:** Amazon Redshift
 
-**Visualization:** Power BI
+- **Visualization:** Power BI
 
-**Orchestration:** Apache Airflow with Docker
+- **Orchestration:** Apache Airflow with Docker
 
-**Processing:** Python
+- **Processing:** Python
 
 
 ## **Architecture**
