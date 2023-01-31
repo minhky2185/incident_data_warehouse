@@ -33,17 +33,37 @@ The architecture of this project is presented as follows:
 - The data warehouse schema is designed follow `Star schema` model. 
 - To manage the relation many to many between incidents and incident categories, the `bridge table` is used.
 - To manage changes in data, `SCD Type 1` is applied to all table, `SCD Type 2` applied to `dim_category` and `dim_intersection` tables.
+
+![data_model](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/data_model.png)
+
 ## **ETL Pipeline**
 - To manage the repetitive jobs of ingest (from source to staging area) and load to data warehouse, I build 2 Airflow custom operators are `Socrata_to_S3` and `S3_to_Redshift`.
 - Full load pipeline architecture
+
+![full_load](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/full_load.png)
+
 - Full load pipeline architecture (zoom in)
+
+![full_load_zoom_in](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/full_load_zoom_in.png)
+
 - Incremental load pipeline architecture
+
+![incre_load](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/incre_load.png)
+
 - Incremental load pipeline architecture (zoom in)
+
+![incre_load_zoom_in](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/incre_load_zoom_in.png)
 
 ## **Visualization**
 Some dashboards create from the data from data warehouse
 - Total report for year 2022
+
+![year_report](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/year_report.png)
+
 - Daily report for everyday 
+
+![daily_report](https://github.com/minhky2185/incident_data_warehouse/blob/main/images/daily_report.png)
+
 ## **Achievement in learning**
 ### Python
 - Use Python to process data, especially the date time datatype. Most used libraries to process data are Pandas and Numpy.
