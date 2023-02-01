@@ -1,0 +1,13 @@
+{
+    "S3_STORAGE": {
+        "RAW_ZONE_BUCKET": "",
+        "CLEANSED_ZONE_BUCKET": "",
+        "STAGE_ZONE_BUCKET": "",
+        "TIME_STORE_GRAIN": "/{execution_date.year}/{execution_date.month}/{execution_date.day}"
+    },
+    "airflow_connection": {
+        "aws": "aws_credentials",
+        "http": "incident_api",
+        "redshift": "redshift"
+    }
+}
