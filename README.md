@@ -15,7 +15,7 @@ The project aims to build a data warehouse for incidents that happened in San Fr
 
 - **Orchestration:** Apache Airflow with Docker
 
-- **Processing:** Python
+- **Processing:** Python, SQL
 
 
 ## **Architecture**
@@ -33,6 +33,7 @@ The architecture of this project is presented as follows:
 - The data warehouse schema is designed follow `Star schema` model. 
 - To manage the relation many to many between incidents and incident categories, the `bridge table` is used.
 - To manage changes in data, `SCD Type 1` is applied to all table, `SCD Type 2` applied to `dim_category` and `dim_intersection` tables.
+- These SCD types are implemented using SQL.
 
 <p align="center">
   <img src="https://github.com/minhky2185/incident_data_warehouse/blob/main/images/data_model.png">
